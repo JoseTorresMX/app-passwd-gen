@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generador de Contraseñas Seguras | Jose Torres</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="label-container">
+      <h1>Generador de Contraseñas Aleatorias</h1>
+      <p>WebApp con HTML, CSS y JS</p>
+      <div class="label-container">
+        <span class="inner-label" id="outerLabel">sd</span>
+        <button class="button update-button" onclick="generatePassword()">
+          💱
+        </button>
+        <button class="button copy-button" onclick="copyPassword()">📃</button>
+        <span class="inner-label" id="innerLabel">interno</span>
+      </div>
+
+      <!--Rango para elecgir la longitud de la contraseña-->
+      <p>Longitud de la contraseña: <span id="rangeValue">10</span></p>
+      <input
+        type="range"
+        id="rangeInput"
+        min="1"
+        max="64"
+        value="10"
+        oninput="updateInnerLabel()"
+      />
+      <!--Cheackboxes para componer la contraseña-->
+      <p>Caracteres a usar:</p>
+      <input type="checkbox" id="checkboxMayus" checked />
+      <label for="checkboxMayus">ABC</label>
+      <input type="checkbox" id="checkboxMinus" checked />
+      <label for="checkboxMinus">abc</label>
+      <input type="checkbox" id="checkboxNumbers" checked />
+      <label for="checkboxNumbers">123</label>
+      <input type="checkbox" id="checkboxSimbolos" />
+      <label for="checkboxSimbolos">!@#$</label>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
